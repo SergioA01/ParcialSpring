@@ -69,4 +69,15 @@ public class BookController {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, null );
         }
     }
+
+    /*@PutMapping("/{id}")
+    public ResponseEntity<Book> updateBook(@PathVariable Integer id, @RequestBody Book book, @RequestBody Author author) {
+        try {
+            Book bookUpdate = bookService.updateBook(book, id, author);
+            return ResponseEntity.ok(bookUpdate);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }*/
+
 }
